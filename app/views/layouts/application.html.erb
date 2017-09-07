@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SimplecodecastSaas</title>
+  <title>Femme4Beauty</title>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -19,13 +19,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Femme4Beauty</a>
+      <a class="navbar-brand"<%= link_to "Femme4Beauty", root_path %></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-         <li><%= link_to "Home", root_path %></li>
         <li class="active"><a href="#">Store <span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
@@ -43,13 +42,14 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Sign In</a></li>
+        <li><a href="#">Sign In <i class="fa fa-user-o"></i></i></i></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SocialMedia <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook <i class="fa fa-facebook-official"></i></i>
+            </a></li>
+            <li><a href="#">Twitter <i class="fa fa-twitter"></i></a></li>
+            <li><a href="#">Instagram <i class="fa fa-instagram"></i></a></li>
           </ul>
         </li>
       </ul>
