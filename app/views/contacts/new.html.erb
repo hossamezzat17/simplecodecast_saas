@@ -1,37 +1,25 @@
-<form>
-  <div class="row">
-    <div class="col-md-6 mb-3">
-      <label for="validationServer01">First name</label>
-      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" required>
-    </div>
-    <div class="col-md-6 mb-3">
-      <label for="validationServer02">Last name</label>
-      <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name"  required>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6 mb-3">
-      <label for="validationServer03">Street Address</label>
-      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Street Address" required>
-      <div class="invalid-feedback">
-        Please provide a valid Street Address.
-      </div>
-    </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationServer04">City</label>
-      <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="City" required>
-      <div class="invalid-feedback">
-        Please provide a valid City.
-      </div>
-    </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationServer05">Phone Number</label>
-      <input type="number" class="form-control is-invalid" id="validationServer05" placeholder="010" required>
-      <div class="invalid-feedback">
-        Please provide a valid Phone Number.
-      </div>
-    </div>
-  </div>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <h1 class="text-center">Contact Us</h1>
+    <p class="text-center">Reach out if you have any questions or comments.</p>
+    <div class="well">
+      <%= form_for @contact do |f| %>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
 
-  <button class="btn btn-primary" type="submit">Submit</button>
-</form>
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :comments %>
+          <%= f.text_area :comments, class: 'form-control' %>
+        </div>
+        <%= f.submit 'Submit', class: 'btn btn-default' %>
+      <% end %>
+    </div>
+  </div>
+</div>
